@@ -1,7 +1,6 @@
 var luigi = document.getElementById('luigi');
 var box = document.getElementById('box');
-
-
+var error = document.getElementById('error');
 function jump(){
     if(luigi.classList != 'active'){
         luigi.classList.add('active')
@@ -23,6 +22,6 @@ var check = setInterval(function() {
     if (boxLeft <20 && boxLeft > 0 && luigiTop >= 200) {
         box.style.animation = 'none';
         box.style.display = 'none';
-        alert('You Lose');
+        error.style.display = 'block';
     }
 }, 10);
