@@ -49,9 +49,11 @@ body{
     top: 50%;
     left: 25%;
    color: #eb0d20;
-   animation: blink-animation 1s steps(5, start) infinite;
-   -webkit-animation: blink-animation 1s steps(5, start) infinite;
    display: none;
+}
+h1{
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
 }
 @keyframes blink-animation {
     to {
@@ -80,4 +82,18 @@ body{
     font-size: 20px;
     background-color: #08837b;
     color: #fff;
+    border-radius: 30px;
+}
+.over{
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #08837b;
+    border-radius: 30px;
+    width: 100px;
+    height: 50px;
+    position: fixed;
+    left: 43%;
+    top: 70%;
+    cursor: pointer;
 }
