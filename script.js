@@ -1,6 +1,9 @@
 var luigi = document.getElementById('luigi');
 var box = document.getElementById('box');
 var error = document.getElementById('error');
+var overlayContainer = document.getElementById('overlay');
+var start = document.getElementById('button');
+
 function jump(){
     if(luigi.classList != 'active'){
         luigi.classList.add('active')
@@ -25,3 +28,16 @@ var check = setInterval(function() {
         error.style.display = 'block';
     }
 }, 10);
+function overlay (){
+    if(overlayContainer.style.display !== 'none'){
+        box.style.animation = 'none';
+        luigi.style.animation = 'none';
+    }
+    overlayContainer.classList.add('inactive')
+}
+start.onclick = function(event){
+    event.stopPropagation();
+    overlay ();
+}
+
+
