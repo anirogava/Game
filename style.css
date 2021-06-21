@@ -27,6 +27,8 @@ body{
     position: relative;
     top: 300px;
     left: 700px;
+}
+.box.active{
     animation: box 2s infinite linear;
 }
 @keyframes box{
@@ -66,6 +68,7 @@ body{
     top: 0;
     left: 0;
     background-color: rgba(0,0, 0, .9);
+    z-index: 10;
 }
 .button{
     width: 70px;
@@ -73,7 +76,7 @@ body{
     cursor: pointer;
     position: fixed;
     top: 350px;
-    left: 600px;
+    left: 650px;
     font-size: 20px;
     background-color: #08837b;
     color: #fff;

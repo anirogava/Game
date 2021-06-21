@@ -29,14 +29,11 @@ var check = setInterval(function() {
     }
 }, 10);
 function overlay (){
-    if(overlayContainer.style.display !== 'none'){
-        box.style.animation = 'none';
-        luigi.style.animation = 'none';
-    }
     overlayContainer.classList.add('inactive')
 }
 start.onclick = function(event){
     event.stopPropagation();
+    box.classList.add('active')
     overlay ();
 }
 
