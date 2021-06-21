@@ -36,5 +36,8 @@ start.onclick = function(event){
     box.classList.add('active')
     overlay ();
 }
+overlayContainer.onclick = function(e){
+    e.stopPropagation();
+}
 
 
