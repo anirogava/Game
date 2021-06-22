@@ -1,0 +1,20 @@
+@media (max-width: 908px){
+    .container{
+        width: 100%;
+    }
+}
+@media (max-width: 802px){
+    .over{
+       top: 80%;
+    }
+}
+@media (max-width: 644px){
+    h1{
+        font-size: 50px;
+    }
+}
+@media (max-width: 392px){
+    h1{
+        font-size: 40px;
+    }
+}

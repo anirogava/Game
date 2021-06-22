@@ -18,15 +18,6 @@ window.document.addEventListener('keypress', logKey);
 function logKey(e) {
   jump();
 }
-
-
-
-
-
-// window.onclick = function(event) {
-//     return jump(event);
-// }
-
 var check = setInterval(function() {
     var luigiTop = 
     parseInt(window.getComputedStyle(luigi).getPropertyValue('top'));
