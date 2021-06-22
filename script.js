@@ -3,6 +3,7 @@ var box = document.getElementById('box');
 var error = document.getElementById('error');
 var overlayContainer = document.getElementById('overlay');
 var start = document.getElementById('button');
+var over = document.getElementById('over');
 
 function jump(){
     if(luigi.classList != 'active'){
@@ -13,9 +14,18 @@ function jump(){
         luigi.classList.remove('active'); 
     }, 500);
 };
-window.onclick = function(event) {
-    return jump(event);
+window.document.addEventListener('keypress', logKey);
+function logKey(e) {
+  jump();
 }
+
+
+
+
+
+// window.onclick = function(event) {
+//     return jump(event);
+// }
 
 var check = setInterval(function() {
     var luigiTop = 
@@ -23,7 +33,6 @@ var check = setInterval(function() {
     var boxLeft = 
     parseInt(window.getComputedStyle(box).getPropertyValue('left'));
     if (boxLeft <20 && boxLeft > 0 && luigiTop >= 200) {
-        box.style.animation = 'none';
         box.style.display = 'none';
         error.style.display = 'block';
     }
@@ -39,5 +48,10 @@ start.onclick = function(event){
 overlayContainer.onclick = function(e){
     e.stopPropagation();
 }
-
+over.onclick = function(){
+    error.style.display = 'none';
+    box.style.display = 'block';
+    box.classList.add('active')
+    console.log(event)
+}
 
